@@ -4,7 +4,9 @@
     <td>{{ todo.description }}</td>
     <td>{{ todo.date }}</td>
     <td>
-      <button @click="deleteTodo()" />
+      <button @click="deleteTodo()">
+        Delete
+      </button>
     </td>
   </tr>
 </template>
