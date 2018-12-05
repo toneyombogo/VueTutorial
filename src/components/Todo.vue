@@ -1,7 +1,7 @@
 <template>
   <tr>
-    <td>{{ todo.name|upperCaseFilter }}</td>
-    <td>{{ todo.description }}</td>
+    <td>{{ todo.name|upperLowerCase }}</td>
+    <td>{{ todo.description|upperCaseFilter }}</td>
     <td>{{ todo.date }}</td>
     <td>
       <button @click="deleteTodo()">
@@ -15,6 +15,9 @@ export default {
   filters: {
     upperCaseFilter(value) {
       return value.toUpperCase();
+    },
+    upperLowerCase(value) {
+      return value.toLowerCase();
     }
   },
   props: {
