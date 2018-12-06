@@ -3,11 +3,8 @@
     <td>{{ todo.name|upperLowerCase }}</td>
     <td>{{ todo.description|upperCaseFilter }}</td>
     <td>{{ todo.date }}</td>
-    <td>
-      <button @click="deleteTodo()">
-        Delete
-      </button>
-    </td>
+    
+    <td slot />
   </tr>
 </template>
 <script>
@@ -26,7 +23,7 @@ export default {
       default: null
     },
     order: {
-      type: String,
+      type: Number,
       default: null
     }
   },

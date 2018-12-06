@@ -4,7 +4,23 @@
       alt="Vue logo"
       src="./assets/logo.png"
     >
-    <TodoList />
+    <TodoList>
+      <h2>This testing slot Am trying to catch up</h2>
+      <button slot="buttonslot">
+        Button Named slot
+      </button>
+    </TodoList>
+    <RouterLink to="/about-us">
+      About Us
+    </RouterLink>
+    <RouterLink to="/contact-us">
+      Contact Us
+    </RouterLink>
+    <RouterView />
+
+    <button @click="goToAboutUs">
+      GoToAboutUs
+    </button>
   </div>
 </template>
 
@@ -14,6 +30,11 @@ export default {
   name: "App",
   components: {
     TodoList
+  },
+  methods: {
+    goToAboutUs() {
+      this.$router.push("/about-us");
+    }
   }
 };
 </script>

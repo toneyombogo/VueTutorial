@@ -50,6 +50,9 @@
     <button @click="addToDo">
       Add
     </button>
+    <div>
+      <button>Button</button>
+    </div>
     <table>
       <thead>
         <tr>
@@ -67,9 +70,16 @@
           :key="index"
           :order="index"
           :todo="todoItem"
-        />
+        >
+          <td slot="deletebutton"> 
+            <button @click="deleteTodo(index)">
+              Delete
+            </button>
+          </td>
+        </tr>
       </tbody>
     </table>
+    <slot />
   </div>
 </template>
 <script>
@@ -139,6 +149,9 @@ export default {
       this.newTodo.date = new Date();
       this.todoList.push(this.newTodo);
       this.newTodo = {};
+    },
+    deleteTodo(index) {
+      this.todoList.splice(index, 1);
     }
   }
 };
