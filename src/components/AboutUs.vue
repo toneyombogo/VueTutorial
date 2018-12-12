@@ -1,12 +1,16 @@
 <template>
-  <h2>
-    this is About us Page
-
+  <div>
+    <h2>{{ bindtest }} </h2>
     <button>Go Back</button>
-  </h2>
+  </div> 
 </template>
 <script>
 export default {
+  data() {
+    return {
+      bindtest: "this is My Binding stest when Manu is not around"
+    };
+  },
   methods: {
     goBack() {
       this.$router.go(-1);

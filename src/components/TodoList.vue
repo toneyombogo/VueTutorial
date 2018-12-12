@@ -1,7 +1,10 @@
 <template>
   <div>
     <div class="form-control">
-      <label for="name">
+      <label
+        ref="username"
+        for="name"
+      >
         Name
       </label>
       <input

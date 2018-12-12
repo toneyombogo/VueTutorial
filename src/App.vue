@@ -1,9 +1,5 @@
 <template>
   <div id="app">
-    <img
-      alt="Vue logo"
-      src="./assets/logo.png"
-    >
     <TodoList>
       <h2>This testing slot Am trying to catch up</h2>
       <button slot="buttonslot">
