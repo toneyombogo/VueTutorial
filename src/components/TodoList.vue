@@ -82,14 +82,17 @@
         </tr>
       </tbody>
     </table>
+    <Posts />
     <slot />
   </div>
 </template>
 <script>
 import Todo from "./Todo";
+import Posts from "./Post";
 export default {
   components: {
-    Todo
+    Todo,
+    Posts
   },
   filters: {
     OrderByNameAsc(todoItemList) {
